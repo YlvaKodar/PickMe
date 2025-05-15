@@ -1,0 +1,21 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+.idea_modules/
+
+# Kompilerade filer
+*.class
+
+# OS-specifika filer
+.DS_Store
+Thumbs.db
+
+# Tillfälliga filer
+*.swp
+*~
+
+# Node.js
+node_modules/
+npm-debug.log
