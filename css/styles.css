@@ -613,6 +613,15 @@ progress {
   height: auto;
 }
 
+.dev-icons i {
+  font-size: 2.5rem;
+  margin: 0.5rem;
+}
+
+.dev-icons .devicon-mysql-original-wordmark {
+  font-size: 2rem; /* MySQL-ikonen kan behöva vara mindre */
+}
+
 .figure {
   display: inline-block;
 }
