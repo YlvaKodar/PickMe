@@ -3736,6 +3736,24 @@ textarea.form-control-lg {
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
+.sub-nav-link {
+  padding-left: 2rem !important;
+  font-size: 0.9rem;
+  font-weight: 600 !important;
+  color: var(--bs-nav-link-color);
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.sub-nav-link:hover {
+  color: var(--bs-primary) !important;
+}
+
+a[aria-expanded="true"] .fa-chevron-down {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .nav-link {
     transition: none;
@@ -10987,6 +11005,22 @@ p.lead {
   outline-color: #d48a6e;
 }
 
+#sideNav .navbar-nav .nav-item .sub-nav-link {
+  padding-left: 2rem !important;
+  font-size: 0.65rem !important;
+  font-weight: 600 !important;
+  color: var(--bs-navbar-color) !important;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+
+#sideNav .navbar-nav .nav-item .sub-nav-link:hover {
+  color: var(--bs-navbar-hover-color) !important;
+}
+
+
+
 @media (min-width: 992px) {
   #sideNav {
     padding-left: 0;
@@ -11000,6 +11034,7 @@ p.lead {
     width: 17rem;
     height: 100vh;
   }
+
   #sideNav .navbar-brand {
     display: flex;
     margin: auto auto 0;

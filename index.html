@@ -30,8 +30,21 @@
             class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#hello">Hej</a></li>
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Om mig</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#hello">Ylva kodar</a></li>
+            <li class="nav-item">
+                <a class="nav-link" href="#about" data-bs-toggle="collapse" data-bs-target="#aboutSubmenu"
+                   aria-expanded="false">
+                    Om mig <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="collapse" id="aboutSubmenu">
+                    <ul class="list-unstyled">
+                        <li><a class="nav-link sub-nav-link" href="#about">Blir det vi?</a></li>
+                        <li><a class="nav-link sub-nav-link" href="#why-code">Varför kod?</a></li>
+                        <li><a class="nav-link sub-nav-link" href="#education">Min utbildning</a></li>
+                        <li><a class="nav-link sub-nav-link" href="#why-pick-me">Varför välja mig</a></li>
+                    </ul>
+                </div>
+            </li>
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Mina projekt</a></li>
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#more">Annat jag gör</a></li>
             <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">CV</a></li>
@@ -67,7 +80,7 @@
     <section class="resume-section" id="about">
         <div class="resume-section-content">
             <h2 class="mb-5">Om mig</h2>
-            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="are-we-a-match">
                 <div class="flex-grow-1">
                     <h3 class="mb-0">Hej! </h3>
                     <div class="mt-3">
@@ -91,7 +104,7 @@
                 </div>
                 <!-- <div class="flex-shrink-0"><span class="text-primary">August 2006 - May 2010</span></div> -->
             </div>
-            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="why-code">
                 <div class="flex-grow-1">
                     <h3 class="mb-0">Varför kod?</h3>
                     <p>Jag fastnade för kod av samma skäl som jag tidigare fastnat för textvård och musik-arrangering:
@@ -135,7 +148,7 @@
                 <!-- <div class="flex-shrink-0"><span class="text-primary">August 2002 - May 2006</span></div> -->
             </div>
 
-            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="education">
                 <div class="flex-grow-1">
                     <h3 class="mb-0">Min utbildning </h3>
                     <p>Jag läser Nackademins KY-utbildning <a
@@ -161,7 +174,7 @@
                 <!-- <div class="flex-shrink-0"><span class="text-primary">August 2002 - May 2006</span></div> -->
             </div>
 
-            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5"  id="why-pick-me">
                 <div class="flex-grow-1">
                     <h3 class="mb-0">Varför välja mig?</h3>
                     <div class="subheading mb-2">Det lätta svaret</div>
@@ -199,7 +212,8 @@
                     <div class="collapse" id="readMoreNpf">
                         <p>Min hjärna är inte "lagom". Den gör nästan alltid alldeles för mycket eller alldeles för
                             lite. Jag fungerar bäst när jag får göra komplexa, uppslukande saker
-                            som inte ger utrymme för splittrad uppmärksamhet. Som att spela, koda, sjunga eller arra musik.
+                            som inte ger utrymme för splittrad uppmärksamhet. Som att spela, koda, sjunga eller arra
+                            musik.
                             Men allt som hör vardagen till, allt sånt som andra gör på autopilot, tycker jag är orimligt
                             svårt, och sociala
                             sammanhang kostar mig enorma mängder energi. Liksom många andra npf-tjejer
@@ -348,8 +362,8 @@
 
                             <br><br>Appen är ett tidtagar-verktyg som kan användas under möten. Resultatet av
                             sammanställs i diagram som kan sparas ner i pdf-format.
-                            Den nuvarande webb-appen är en prototyp; slutmålet är en PWA-app med utökad funktionalitet
-                            för till exempel inloggning, datalagring och statistikvy för strukturella förändringar över
+                            Den nuvarande webbappen är en prototyp; slutmålet är en PWA-app med utökad funktionalitet
+                            för till exempel inloggning, datalagring och statistik-vy för strukturella förändringar över
                             tid.
 
                             <br><br>Appen är framtagen i samarbete med GenderBalance.se. </p>
@@ -430,7 +444,7 @@
                 <div class="flex-grow-1">
                     <h3 class="mb-0">Ylva skapar</h3>
                     <div class="subheading mb-3">Hantverk och skapande</div>
-                    <p>Jag gillar textilt hantverk.
+                    <p>Jag gillar textilt hantverk. Jag syr, stickar och nålbinder. Men det får vi prata mer om en annan gång.
                     </p>
                     <!-- Video inbäddning -->
                 </div>
