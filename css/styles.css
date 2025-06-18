@@ -11112,3 +11112,99 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+
+.floating-app-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, var(--bs-primary), #7d4a2f);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 4px 20px rgba(94, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+
+.floating-app-btn:hover {
+  background: linear-gradient(135deg, #7d4a2f, var(--bs-primary));
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(94, 0, 0, 0.4);
+  text-decoration: none;
+}
+
+.floating-app-btn:focus {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* Animerad puls-effekt */
+.floating-app-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50px;
+  background: var(--bs-primary);
+  opacity: 0;
+  z-index: -1;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+}
+
+/* Responsiv design */
+@media (max-width: 768px) {
+  .floating-app-btn {
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 16px;
+    font-size: 12px;
+  }
+
+  .floating-btn-text {
+    display: none;
+  }
+
+  .floating-app-btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    justify-content: center;
+  }
+
+  .floating-app-btn i {
+    margin: 0 !important;
+  }
+}
+
+@media (max-height: 600px) {
+  .floating-app-btn {
+    bottom: 15px;
+    right: 15px;
+  }
+}
