@@ -64,4 +64,51 @@ window.addEventListener('DOMContentLoaded', event => {
             });
         });
     }
+
+    // Dynamisk button text ...
+    const toggleButtons = document.querySelectorAll('[data-bs-text-collapsed]');
+    if (toggleButtons.length > 0) {
+        toggleButtons.forEach(button => {
+            const target = document.querySelector(button.getAttribute('data-bs-target'));
+            if (target) {
+                const collapsedText = button.getAttribute('data-bs-text-collapsed');
+                const expandedText = button.getAttribute('data-bs-text-expanded');
+
+                target.addEventListener('shown.bs.collapse', function() {
+                    button.textContent = expandedText;
+                });
+
+                target.addEventListener('hidden.bs.collapse', function() {
+                    button.textContent = collapsedText;
+                });
+            }
+        });
+    }
+
+    // Read more buttons
+    const readMoreCodeBtn = document.querySelector('[data-bs-target="#readMoreCode"]');
+    const readMoreCodeContent = document.getElementById('readMoreCode');
+
+    if (readMoreCodeBtn && readMoreCodeContent) {
+        readMoreCodeContent.addEventListener('show.bs.collapse', function() {
+            readMoreCodeBtn.innerHTML = '<i class="fas fa-chevron-up me-1"></i>Visa mindre';
+        });
+
+        readMoreCodeContent.addEventListener('hide.bs.collapse', function() {
+            readMoreCodeBtn.innerHTML = '<i class="fas fa-chevron-down me-1"></i>Läs mer om varför jag började koda ...';
+        });
+    }
+
+    const readMoreNpfBtn = document.querySelector('[data-bs-target="#readMoreNpf"]');
+    const readMoreNpfContent = document.getElementById('readMoreNpf');
+
+    if (readMoreNpfBtn && readMoreNpfContent) {
+        readMoreNpfContent.addEventListener('show.bs.collapse', function() {
+            readMoreNpfBtn.innerHTML = '<i class="fas fa-chevron-up me-1"></i>Visa mindre';
+        });
+
+        readMoreNpfContent.addEventListener('hide.bs.collapse', function() {
+            readMoreNpfBtn.innerHTML = '<i class="fas fa-chevron-down me-1"></i>Läs mer om det ...';
+        });
+    }
 });
