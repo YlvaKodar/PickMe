@@ -31,4 +31,37 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    // Interaktiv strength list
+    const strengthHeaders = document.querySelectorAll('.strength-header');
+    if (strengthHeaders.length > 0) {
+        strengthHeaders.forEach(header => {
+            header.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                const content = document.getElementById(targetId);
+
+                if (content) {
+                    // Toggle locked state
+                    if (content.classList.contains('locked')) {
+                        content.classList.remove('locked', 'show');
+                        this.classList.remove('expanded');
+                    } else {
+                        content.classList.add('locked', 'show');
+                        this.classList.add('expanded');
+
+                        // Remove locked state from other items
+                        strengthHeaders.forEach(otherHeader => {
+                            if (otherHeader !== this) {
+                                const otherId = otherHeader.getAttribute('data-target');
+                                const otherContent = document.getElementById(otherId);
+                                if (otherContent) {
+                                    otherContent.classList.remove('locked', 'show');
+                                    otherHeader.classList.remove('expanded');
+                                }
+                            }
+                        });
+                    }
+                }
+            });
+        });
+    }
 });
