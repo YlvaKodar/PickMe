@@ -24,7 +24,7 @@ function updateLanguage() {
     elementsWithLang.forEach(element => {
         const text = element.getAttribute(`data-${currentLanguage}`);
         if (text) {
-            element.textContent = text;
+            element.innerHTML = text;
         }
     });
 
