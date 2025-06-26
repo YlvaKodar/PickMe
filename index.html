@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
@@ -20,11 +20,20 @@
 <body id="page-top">
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <span class="d-block d-lg-none">Ylva kodar</span>
         <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2"
                                              src="assets/img/profile.jpg" alt="..."/></span>
     </a>
+
+
+    <div class="language-toggle-container d-block">
+        <button class="language-toggle" id="languageToggle" onclick="toggleLanguage()">
+            <span id="currentLang">SV</span>
+        </button>
+    </div>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
             aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
             class="navbar-toggler-icon"></span></button>
@@ -63,7 +72,11 @@
             <div class="subheading mb-5">
                 <!-- <a href="mailto:name@email.com">ylva.frojmark@yh.nackademin.se</a>-->
             </div>
-            <p class="lead mb-5">Finnes: Kreativ och detaljorienterad Javastudent med intresse för problemlösning
+            <p class="lead mb-5"
+               data-sv="Finnes: Kreativ och detaljorienterad Javastudent med intresse för problemlösning
+                och hållbarhet. Sökes: Stabil arbetsplats – distans eller hybrid i Uppsala, Stockholm eller Östersund – som kan erbjuda en engagerad och
+                nyfiken junior meningsfull LIA att växa i och lära av."
+               data-en="Me: Creative and detail-oriented Java student with a passion for problem-solving and sustainability. You: Warm and dependable company, able to offer an enthusiastic and curious intern a meaningful and (appropriately) challenging work experience – remote or hybrid in Uppsala, Stockholm or Östersund.">Finnes: Kreativ och detaljorienterad Javastudent med intresse för problemlösning
                 och hållbarhet. Sökes: Stabil arbetsplats – distans eller hybrid i Uppsala, Stockholm eller Östersund – som kan erbjuda en engagerad och
                 nyfiken junior meningsfull LIA att växa i och lära av.
             </p>
