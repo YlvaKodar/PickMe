@@ -7,7 +7,88 @@
 // Scripts
 // 
 
+// Language toggler stuff
+let currentLanguage = 'sv';
+
+function toggleLanguage() {
+    currentLanguage = currentLanguage === 'sv' ? 'en' : 'sv';
+    updateLanguage();
+    updateLanguageToggle();
+    localStorage.setItem('preferred-language', currentLanguage);
+    document.documentElement.lang = currentLanguage;
+}
+
+function updateLanguage() {
+    const elementsWithLang = document.querySelectorAll('[data-sv][data-en]');
+
+    elementsWithLang.forEach(element => {
+        const text = element.getAttribute(`data-${currentLanguage}`);
+        if (text) {
+            element.innerHTML = text;
+        }
+    });
+
+
+    updateButtonTexts();
+}
+
+function updateLanguageToggle() {
+    const langElement = document.getElementById('currentLang');
+
+    if (langElement) {
+        langElement.textContent = currentLanguage === 'sv' ? 'SV' : 'EN';
+    }
+}
+
+function updateButtonTexts() {
+    const readMoreCodeBtn = document.querySelector('[data-bs-target="#readMoreCode"]');
+    const readMoreNpfBtn = document.querySelector('[data-bs-target="#readMoreNpf"]');
+
+    if (readMoreCodeBtn) {
+        const codeContent = document.getElementById('readMoreCode');
+        const isExpanded = codeContent && codeContent.classList.contains('show');
+
+        if (currentLanguage === 'sv') {
+            readMoreCodeBtn.innerHTML = isExpanded
+                ? '<i class="fas fa-chevron-up me-1"></i>Visa mindre'
+                : '<i class="fas fa-chevron-down me-1"></i>Mer om varför jag började koda ...';
+        } else {
+            readMoreCodeBtn.innerHTML = isExpanded
+                ? '<i class="fas fa-chevron-up me-1"></i>Show less'
+                : '<i class="fas fa-chevron-down me-1"></i>More about why I started coding ...';
+        }
+    }
+
+    if (readMoreNpfBtn) {
+        const npfContent = document.getElementById('readMoreNpf');
+        const isExpanded = npfContent && npfContent.classList.contains('show');
+
+        if (currentLanguage === 'sv') {
+            readMoreNpfBtn.innerHTML = isExpanded
+                ? '<i class="fas fa-chevron-up me-1"></i>Visa mindre'
+                : '<i class="fas fa-chevron-down me-1"></i>Mer om det ...';
+        } else {
+            readMoreNpfBtn.innerHTML = isExpanded
+                ? '<i class="fas fa-chevron-up me-1"></i>Show less'
+                : '<i class="fas fa-chevron-down me-1"></i>More about that ...';
+        }
+    }
+}
+
+function initializeLanguage() {
+    const savedLanguage = localStorage.getItem('preferred-language');
+    if (savedLanguage && savedLanguage !== currentLanguage) {
+        currentLanguage = savedLanguage;
+        updateLanguage();
+        updateLanguageToggle();
+        document.documentElement.lang = currentLanguage;
+    }
+}
+
 window.addEventListener('DOMContentLoaded', event => {
+
+    // Initialize language
+    initializeLanguage();
 
     // Activate Bootstrap scrollspy on the main nav element
     const sideNav = document.body.querySelector('#sideNav');
@@ -65,7 +146,7 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     }
 
-    // Dynamisk button text ...
+    // Dynamic button text ...
     const toggleButtons = document.querySelectorAll('[data-bs-text-collapsed]');
     if (toggleButtons.length > 0) {
         toggleButtons.forEach(button => {
@@ -86,29 +167,16 @@ window.addEventListener('DOMContentLoaded', event => {
     }
 
     // Read more buttons
-    const readMoreCodeBtn = document.querySelector('[data-bs-target="#readMoreCode"]');
     const readMoreCodeContent = document.getElementById('readMoreCode');
-
-    if (readMoreCodeBtn && readMoreCodeContent) {
-        readMoreCodeContent.addEventListener('show.bs.collapse', function() {
-            readMoreCodeBtn.innerHTML = '<i class="fas fa-chevron-up me-1"></i>Visa mindre';
-        });
-
-        readMoreCodeContent.addEventListener('hide.bs.collapse', function() {
-            readMoreCodeBtn.innerHTML = '<i class="fas fa-chevron-down me-1"></i>Läs mer om varför jag började koda ...';
-        });
-    }
-
-    const readMoreNpfBtn = document.querySelector('[data-bs-target="#readMoreNpf"]');
     const readMoreNpfContent = document.getElementById('readMoreNpf');
 
-    if (readMoreNpfBtn && readMoreNpfContent) {
-        readMoreNpfContent.addEventListener('show.bs.collapse', function() {
-            readMoreNpfBtn.innerHTML = '<i class="fas fa-chevron-up me-1"></i>Visa mindre';
-        });
+    if (readMoreCodeContent) {
+        readMoreCodeContent.addEventListener('shown.bs.collapse', updateButtonTexts);
+        readMoreCodeContent.addEventListener('hidden.bs.collapse', updateButtonTexts);
+    }
 
-        readMoreNpfContent.addEventListener('hide.bs.collapse', function() {
-            readMoreNpfBtn.innerHTML = '<i class="fas fa-chevron-down me-1"></i>Läs mer om det ...';
-        });
+    if (readMoreNpfContent) {
+        readMoreNpfContent.addEventListener('shown.bs.collapse', updateButtonTexts);
+        readMoreNpfContent.addEventListener('hidden.bs.collapse', updateButtonTexts);
     }
 });
