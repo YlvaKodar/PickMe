@@ -20,11 +20,20 @@
 <body id="page-top">
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <span class="d-block d-lg-none">Ylva kodar</span>
         <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2"
                                              src="assets/img/profile.jpg" alt="..."/></span>
     </a>
+
+
+    <div class="language-toggle-container d-block">
+        <button class="language-toggle" id="languageToggle" onclick="toggleLanguage()">
+            <span id="currentLang">SV</span>
+        </button>
+    </div>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
             aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
             class="navbar-toggler-icon"></span></button>
@@ -34,20 +43,28 @@
             <li class="nav-item">
                 <a class="nav-link" href="#about" data-bs-toggle="collapse" data-bs-target="#aboutSubmenu"
                    aria-expanded="false">
-                    Om mig <i class="fas fa-chevron-down"></i>
+                    <span data-sv="Om mig" data-en="About me">Om mig</span>
+                    <i class="fas fa-chevron-down"></i>
                 </a>
                 <div class="collapse" id="aboutSubmenu">
                     <ul class="list-unstyled">
-                        <li><a class="nav-link sub-nav-link" href="#about">Blir det vi?</a></li>
-                        <li><a class="nav-link sub-nav-link" href="#why-code">Varför kod?</a></li>
-                        <li><a class="nav-link sub-nav-link" href="#education">Min utbildning</a></li>
-                        <li><a class="nav-link sub-nav-link" href="#why-pick-me">Varför välja mig</a></li>
+                        <li><a class="nav-link sub-nav-link" href="#about" data-sv="Blir det vi?"
+                               data-en="Will we hit it off?">Blir det vi?</a></li>
+                        <li><a class="nav-link sub-nav-link" href="#why-code" data-sv="Varför kod?" data-en="Why code?">Varför
+                            kod?</a></li>
+                        <li><a class="nav-link sub-nav-link" href="#education" data-sv="Min utbildning"
+                               data-en="My coding education">Min utbildning</a></li>
+                        <li><a class="nav-link sub-nav-link" href="#why-pick-me" data-sv="Varför välja mig?"
+                               data-en="Why pick me?">Varför välja mig</a></li>
                     </ul>
                 </div>
             </li>
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Mina projekt</a></li>
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#more">Annat jag gör</a></li>
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">CV</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects" data-sv="Mina projekt"
+                                    data-en="My projects">Mina projekt</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#more" data-sv="Annat jag gör"
+                                    data-en="Other things I like">Annat jag gör</a></li>
+            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience" data-sv="CV"
+                                    data-en="CV">CV</a></li>
         </ul>
     </div>
 </nav>
@@ -63,14 +80,22 @@
             <div class="subheading mb-5">
                 <!-- <a href="mailto:name@email.com">ylva.frojmark@yh.nackademin.se</a>-->
             </div>
-            <p class="lead mb-5">Finnes: Kreativ och detaljorienterad Javastudent med intresse för problemlösning
+            <p class="lead mb-5"
+               data-sv="Finnes: Kreativ och detaljorienterad Javastudent med intresse för problemlösning
                 och hållbarhet. Sökes: Stabil arbetsplats – distans eller hybrid i Uppsala, Stockholm eller Östersund – som kan erbjuda en engagerad och
+                nyfiken junior meningsfull LIA att växa i och lära av."
+               data-en="Me: Creative and detail-oriented Java student with a passion for problem-solving and sustainability. You: Warm and dependable company, able to offer an enthusiastic and curious intern a meaningful and (appropriately) challenging work experience – remote or hybrid in Uppsala, Stockholm or Östersund.">
+                Finnes: Kreativ och detaljorienterad Javastudent med intresse för problemlösning
+                och hållbarhet. Sökes: Stabil arbetsplats – distans eller hybrid i Uppsala, Stockholm eller Östersund –
+                som kan erbjuda en engagerad och
                 nyfiken junior meningsfull LIA att växa i och lära av.
             </p>
             <div class="social-icons">
                 <a class="social-icon" href="mailto:ylva.frojmark@yh.nackademin.se"><i class="fas fa-envelope"></i></a>
-                <a class="social-icon" href="https://github.com/YlvaKodar" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
-                <a class="social-icon" href="https://www.linkedin.com/in/ylva-fr%C3%B6jmark-439a70338/" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                <a class="social-icon" href="https://github.com/YlvaKodar" target="_blank" rel="noopener"><i
+                        class="fab fa-github"></i></a>
+                <a class="social-icon" href="https://www.linkedin.com/in/ylva-fr%C3%B6jmark-439a70338/" target="_blank"
+                   rel="noopener"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
     </section>
@@ -79,13 +104,43 @@
     <!-- About -->
     <section class="resume-section" id="about">
         <div class="resume-section-content">
-            <h2 class="mb-5">Om mig</h2>
+            <h2 class="mb-5" data-sv="Hej!" data-en="Hello!">Om mig</h2>
             <div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="are-we-a-match">
                 <div class="flex-grow-1">
-                    <h3 class="mb-0">Hej! </h3>
                     <div class="mt-3">
-                        <h3 class="mb-0">Vill ni bli min LIA-plats?</h3>
-                        <p>Jag är en blivande utvecklare som söker LIA oktober -25 – mars -26. Det huvudsakliga språket
+                        <h3 class="mb-0" data-sv="Vill ni bli min LIA-plats?" data-en="Can I spend some time with you?">
+                            Vill ni bli min LIA-plats?</h3>
+                        <p data-sv="   Jag är en blivande utvecklare som söker LIA oktober&nbsp;-25&nbsp;–&nbsp;mars&nbsp;-26. Det huvudsakliga
+                            språket
+                            i min utbildning är Java, men jag är öppen för att jobba med andra språk under min LIA.
+                            Plugg är härligt, men nu ser jag fram emot att få prova livet som utvecklare på riktig. Jag
+                            söker er som vill lära mig allt ni kan. I utbyte kan jag erbjuda sex månader med en nyfiken
+                            och läraktig kodare med god förmåga att kommunicera i tal och skrift, hög arbetsmoral, och
+                            goda vitsord (från helt andra områden).
+
+                            <br><br>Som färsk men entusiastisk kodare vet jag att mitt arbetsliv kommer att vara mentalt
+                            stimulerande och kreativt. Men lika viktigt för mig är att jag kan stå för vad jag är med
+                            och
+                            skapar. Jag vill inte leva på att underblåsa klimatkrisen och väljer därför att tacka nej
+                            till
+                            att arbeta för industrier som flyg-, kött-, eller fast fashion-.
+
+                            <br><br>Är vi en match?"
+                           data-en="I'm an aspiring developer seeking LIA (internship) October&nbsp;'25&nbsp;–&nbsp;March&nbsp;'26.
+                            Studying is great fun, but now I yearn to get a taste of the real life developer experience.
+                            In exchange, I offer six months with an enthusiastic and curious
+                            junior developer, with strong communication skills and high work ethics, who comes highly recommended by former colleagues
+                            (in completely unrelated fields). My main programming language is
+                            Java, but I'm open to try new things.
+
+                            <br><br>As a fresh but keen coder, I feel sure my future career will be
+                            stimulating and creative. But equally important to me is feeling good about what I do.
+                            I still care about this planet, and so I choose not to work
+                            for industries such as aviation, meat production or fast fashion.
+
+                            <br><br>Are we a match?">
+                            Jag är en blivande utvecklare som söker LIA oktober&quot;-25&quot;–&quot;mars&quot;-26. Det huvudsakliga
+                            språket
                             i min utbildning är Java, men jag är öppen för att jobba med andra språk under min LIA.
                             Plugg är härligt, men nu ser jag fram emot att få prova livet som utvecklare på riktig. Jag
                             söker er som vill lära mig allt ni kan. I utbyte kan jag erbjuda sex månader med en nyfiken
@@ -106,8 +161,23 @@
             </div>
             <div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="why-code">
                 <div class="flex-grow-1">
-                    <h3 class="mb-0">Varför kod?</h3>
-                    <p>Jag fastnade för kod av samma skäl som jag tidigare fastnat för textvård och musik-arrangering:
+                    <h3 class="mb-0" data-sv="Varför kod?" data-en="Why code?">Varför kod?</h3>
+                    <p data-sv="Jag fastnade för kod av samma skäl som jag tidigare fastnat för textvård och musik-arrangering:
+                        programmering
+                        är en kreativ process som kräver noggrannhet, nyfikenhet och mycket klur över små detaljer. Man
+                        behöver
+                        förstå regler och konventioner, och man behöver veta när man bör följa dem och när det är läge
+                        att prova något nytt. Och man behöver tycka att
+                        den euforiska känslan av att ha löst ett problem överväger den tålamodsprövande vägen dit. Om
+                        och om igen."
+                        data-en="I got hooked on code for the same reasons I got hooked on text editing and musical arrangement:
+                        programming
+                        is a creative process that requires precision, curiosity. You
+                        need to
+                        understand rules and conventions, and you
+                        need to know when to follow them and when to
+                        try something unorthodox.">
+                        Jag fastnade för kod av samma skäl som jag tidigare fastnat för textvård och musik-arrangering:
                         programmering
                         är en kreativ process som kräver noggrannhet, nyfikenhet och mycket klur över små detaljer. Man
                         behöver
@@ -123,7 +193,32 @@
                     </button>
 
                     <div class="collapse" id="readMoreCode">
-                        <p>Många kloka människor har genom åren försökt få mig att förstå att programmering är för
+                        <p data-sv="Många kloka människor har genom åren försökt få mig att förstå att programmering är för
+                            mig. Men inte förrän nyligen började jag lyssna.
+                            Då jobbade jag i skolbibliotek. Jag älskade mitt jobb, och
+                            planerade för en påbyggnadsutbildning som skulle göra mig till fullfjädrad
+                            skolbibliotekarie.
+                            Som tur är tvingades jag
+                            inse i tid att allt som är roligt inte är nyttigt. Mitt jobb var toppen för mig i lagom små
+                            doser, men min neuroatypiska,
+                            ljudkänsliga hjärna skulle inte orka dela arbetsplats med tonåringar i längden. Om jag ville
+                            hålla ett arbetsliv var jag tvungen att tänka om.
+                            <br><br>Jag behövde något som var utmanande, kreativt och roligt. Jag ville ha möjligheten
+                            att
+                            få skapa med andra och vara en del i ett arbetslag,
+                            men visste samtidigt att jag behöver utrymme att få arbeta ostört och fokuserat för att må
+                            bra.
+                            Jag behövde hitta en plats där en alternativ ingångsvinkel
+                            är en styrka och inte ett handikapp. Så jag gick en introduktionskurs i Java och det kändes
+                            helt rätt."
+                           data-en="Wise people have been trying to convince me to try programming for a long time.
+                           A few years ago, I finally heard them. I was working in a school library at the time.
+                           I loved my job, but I was forced to realize that it wouldn't work for me and my neuroatypical,
+                           noise-sensitive brain in the long run. If I wanted a long and healthy working life, I had to rethink.
+                           <br><br>I needed something that was challenging, creative, and fun. I wanted the opportunity to
+                           create with others and be part of a team, but I also knew that I needed space to work undisturbed
+                           and focused to feel good. I needed to find a place where an alternative perspective is a strength,
+                           not a handicap. So I took an introductory Java course and it felt right."> Många kloka människor har genom åren försökt få mig att förstå att programmering är för
                             mig. Men inte förrän nyligen började jag lyssna.
                             Då jobbade jag i skolbibliotek. Jag älskade mitt jobb, och
                             planerade för en påbyggnadsutbildning som skulle göra mig till fullfjädrad
@@ -150,8 +245,10 @@
 
             <div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="education">
                 <div class="flex-grow-1">
-                    <h3 class="mb-0">Min utbildning </h3>
-                    <p>Jag läser Nackademins KY-utbildning <a
+                    <h3 class="mb-0" data-sv="Min utbildning" data-en="My education">Min utbildning </h3>
+                    <p data-sv="Jag läser Nackademins KY-utbildning <a href='https://nackademin.se/utbildningar/javautvecklare-distans/' target='_blank'>Javautvecklare (distans)</a>. Kurser som ingår är till exempel objektorienterad programmering, funktionell programmering, backend, databasteknik, it-säkerhet, designmönster, frontend, devops med mera, och förutom Java har vi jobbat med till exempel Kotlin och JS."
+                       data-en="I'am enrolled in Nackademin's vocational education <a href='https://nackademin.se/utbildningar/javautvecklare-distans/' target='_blank'>Java Developer</a>. Courses include object-oriented programming, functional programming, backend, database technology, IT security, design patterns, frontend, devops and more.">
+                        Jag läser Nackademins KY-utbildning <a
                             href="https://nackademin.se/utbildningar/javautvecklare-distans/"
                             target="_blank">Javautvecklare (distans)</a>. Kurser som ingår är till exempel
                         objektorienterad programmering, funktionell
@@ -176,9 +273,27 @@
 
             <div class="d-flex flex-column flex-md-row justify-content-between mb-5" id="why-pick-me">
                 <div class="flex-grow-1">
-                    <h3 class="mb-0">Varför välja mig?</h3>
-                    <div class="subheading mb-2">Det lätta svaret</div>
-                    <p>Jag är ett bra val. Jag jobbar hårt och noggrant, jag tar ansvar för mitt eget lärande och jag är
+                    <h3 class="mb-0" data-sv="Varför välja mig?" data-en="Why pick me?">Varför välja mig?</h3>
+                    <div class="subheading mb-2" data-sv="Det lätta svaret" data-en="There's the easy answer ...">Det lätta svaret</div>
+                    <p
+                            data-sv="Jag är ett bra val. Jag jobbar hårt och noggrant, jag tar ansvar för mitt eget lärande och jag är
+                        social, driftig och pålitlig.
+                        Jag månar om mitt eget och andras välbefinnande. Mitt tidigare arbetsliv har inneburit mycket
+                        självständigt arbete och egna projekt. Jag är
+                        van vid att identifiera och lösa problem på egen hand, men även vid att samordna och organisera
+                        arbete med kollegor, samt vid att vägleda och stötta andra i deras lärande. Jag har mycket god
+                        förmåga att kommunicera i tal och skrift.
+                        Jag är ny på kod. Men kod passar mig, så jag kommer att bli bra på det."
+
+                            data-en="I am a good choice. I work hard and thoroughly, I take responsibility for my own learning and I am
+                            reliable, social, driven.
+                            I care about my own well-being, as well as the well-being of others. My previous working life has involved a lot of
+                            independent work and project managing. I am
+                            used to identifying and solving problems on my own. But I am also used to coordinating and organizing
+                            work with colleagues, as well as guiding and supporting others in their learning. I have good communication skills,
+                            both in writing and verbally.
+                            I am new to programming. But it suits me and I enjoy it, so I will be good at it.">
+                        Jag är ett bra val. Jag jobbar hårt och noggrant, jag tar ansvar för mitt eget lärande och jag är
                         social, driftig och pålitlig.
                         Jag månar om mitt eget och andras välbefinnande. Mitt tidigare arbetsliv har inneburit mycket
                         självständigt arbete och egna projekt. Jag är
@@ -187,8 +302,9 @@
                         förmåga att kommunicera i tal och skrift.
                         Jag är ny på kod. Men kod passar mig, så jag kommer att bli bra på det.
                     </p>
-                    <div class="subheading mb-2">Det mycket svårare svaret</div>
-                    <p>Om ditt företag är som många andra företag jag läst om den senaste tiden, har ni någonstans
+                    <div class="subheading mb-2" data-sv="Det mycket svårare svaret" data-en=" ... and there's the not so easy answer">Det mycket svårare svaret</div>
+                    <p
+                            data-sv='Om ditt företag är som många andra företag jag läst om den senaste tiden, har ni någonstans
                         skrivet att ni strävar efter mångfald, värnar om alternativa perspektiv eller ser era
                         medarbetares olikheter som er främsta styrka. Om det är mer än tomma ord för dig, hoppas jag att
                         du läser vidare. Jag har inte levt det liv som någon i min ålder förväntas ha levt. Men jag har
@@ -199,9 +315,48 @@
                         Jag har en kognitiv funktionsnedsättning. De flesta jag möter, bekanta som kollegor, vet inte om
                         den och märker inte av den. Men den påverkar
                         alla aspekter av min tillvaro. Jag vet att jag tar en risk när jag berättar det här.
-                        Men jag
-                        håller just nu på att lägga om hela mitt liv, med målet att hitta rätt plats för mig, så jag
-                        väljer att spela med öppna kort.
+
+                        <br><br>Jag vet att jag tar en risk när jag berättar det här. Jag tycker inte ens att jag borde
+                        behöva berätta, och om du ger mig ett lillfinger kan jag prata hur länge som helst om vad
+                        jag tycker om vårt samhälle, vår arbetsmarknad och dess syn på vad som är “sjukt” och “friskt”.
+                        Men nu är det som det är, och jag
+                        håller just nu på att lägga om hela mitt liv, med målet att hitta en plats i samhället för mig,
+                        så jag väljer att spela med öppna kort.'
+
+                            data-en="If your company is like many others I've read about recently, you've written somewhere
+                            that you strive for diversity, cherish alternative perspectives, or consider your employees' differences
+                             to be your main strength. If these are more than empty words for you, I hope you'll read on.
+                             I haven't lived the life that someone my age is expected to have lived. But I have experience
+                             of having to find alternative ways to get by.
+
+                             <br><br>
+                             I have a neuropsychiatric functional disorder. Most people I meet, acquaintances and colleagues,
+                             don't know about it, nor do they notice it. But it affects every aspect of my life.
+
+                             I know I'm
+                             taking a risk by telling you this. I don't even think I should have to tell you, and I'd better not
+                             get myself started on what I think about our society and our views on what should be classified as
+                             &quot;sick&quot;, &quot;abnormal&quot; or &quot;healthy&quot;. But we are what we are, and I'm currently in the process of
+                            reorganizing my entire life, with the goal of finding my own place in this society, so I choose
+                            to play with open cards.">
+
+                        Om ditt företag är som många andra företag jag läst om den senaste tiden, har ni någonstans
+                        skrivet att ni strävar efter mångfald, värnar om alternativa perspektiv eller ser era
+                        medarbetares olikheter som er främsta styrka. Om det är mer än tomma ord för dig, hoppas jag att
+                        du läser vidare. Jag har inte levt det liv som någon i min ålder förväntas ha levt. Men jag har
+                        erfarenhet av att behöva hitta alternativa sätt att ta sig fram.
+
+                        <br><br>
+                        Jag har en kognitiv funktionsnedsättning. De flesta jag möter, bekanta som kollegor, vet inte om
+                        den och märker inte av den. Men den påverkar
+                        alla aspekter av min tillvaro.
+
+                        <br><br>Jag vet att jag tar en risk när jag berättar det här. Jag tycker inte ens att jag borde
+                        behöva berätta det här, och om du ger mig ett lillfinger kan jag prata hur länge som helst om vad
+                        jag tycker om vårt samhälle, vår arbetsmarknad och dess syn på vad som är “sjukt” och “friskt”.
+                        Men nu är det som det är, och jag
+                        håller just nu på att lägga om hela mitt liv, med målet att hitta en plats i samhället för mig,
+                        så jag väljer att spela med öppna kort.
                     </p>
 
                     <button class="btn btn-outline-primary btn-sm mb-3" type="button"
@@ -210,7 +365,58 @@
                         <i class="fas fa-chevron-down me-1"></i>Mer om det ...
                     </button>
                     <div class="collapse" id="readMoreNpf">
-                        <p>Min hjärna är inte "lagom". Den gör nästan alltid alldeles för mycket eller alldeles för
+                        <p
+                                data-sv='Min hjärna är inte "lagom". Den gör nästan alltid alldeles för mycket eller alldeles för
+                        lite. Jag fungerar bäst när jag får göra komplexa, uppslukande saker
+                        som inte ger utrymme för splittrad uppmärksamhet. Som att spela, koda, sjunga eller arra
+                        musik.
+                        Men allt som hör vardagen till, allt sånt som andra gör på autopilot, tycker jag är orimligt
+                        svårt, och sociala
+                        sammanhang kostar mig enorma mängder energi. Liksom många andra npf-tjejer
+                        <br> • <a
+                            href="https://www.additudemag.com/adhd-in-girls-women/"
+                            target="_blank">lyckades jag kompensera för mina svårigheter</a> ända tills jag var
+                        i 20-årsåldern
+                        <br> • blev jag sjukskriven och <a
+                            href="https://psychology.org.au/insights/why-are-so-many-neurodivergent-women-misdiagnosed"
+                            target="_blank"> diagnostiserad med alla möjliga
+                        affektiva åkommor</a> som ung vuxen
+                        <br> • <a
+                            href="https://www.durham.ac.uk/research/current/thought-leadership/women-with-autism--adhd-arent-diagnosed-until-adulthood/"
+                            target="_blank"> fick jag inte min rätta diagnos </a> förrän efter många år av ständigt krig med tillvaron.
+
+                        <br><br>Men till slut fick jag den, och nu vet jag följande: Det är dyrt för mig att fungera
+                        "normalt". Därför har jag inte 100&nbsp;% arbetskapacitet
+                        – i alla fall inte om man med "100&nbsp;%" menar 40 timmar i veckan. Mina 100&nbsp;% går åt fortare
+                        än så. Trots det går jag en utbildning på 100&nbsp;%, och det innebär att jag söker praktik på
+                        100&nbsp;%. Men jag söker inte ett arbetsliv på 100&nbsp;%. Jag söker ett arbetsliv att hålla i.'
+
+                                data-en="My brain does not understand the concept of &quot;a reasonable amount&quot;. It's always too much or too little.
+                                I work best when I get to focus on complex, immersive things that leave no room for divided attention.
+                                Like playing, coding, singing or making musical scores. But everyday life tasks, everything that others do on autopilot,
+                                I find unreasonably difficult, and social situations cost me enormous amounts of energy. Like many other NPF women
+
+                                <br> • <a href=&quot;https://www.additudemag.com/adhd-in-girls-women/&quot;
+                        target=&quot;_blank&quot;>I managed to compensate for my difficulties</a> until I was
+                        in my early 20's
+
+                            <br> • I was signed off sick and <a
+                            href=&quot;https://psychology.org.au/insights/why-are-so-many-neurodivergent-women-misdiagnosed&quot;
+                            target=&quot;_blank&quot;> diagnosed with all sorts of affective disorders</a> as a young adult
+
+
+                            <br> • I had spent many years at constant war with existence <a
+                            href=&quot;https://www.durham.ac.uk/research/current/thought-leadership/women-with-autism--adhd-arent-diagnosed-until-adulthood/&quot;
+                            target=&quot;_blank&quot;>before I received my correct diagnosis</a>.
+
+                            <br><br>But in the end I got it, and now I know this: It's expensive for me to function
+                        &quot;normally&quot;. That's why I don't have 100&nbsp;% work capacity
+                        - at least not if by &quot;100&nbsp;%&quot; you mean 40 hours a week. My 100&nbsp;% goes by faster
+                        than that. Despite that, I'm doing a 100&nbsp;% education, and that means I'm looking for an internship
+                        at 100&nbsp;%. But I'm not looking for a 100&nbsp;% working life. I'm looking for a working life that's sustainable for me."
+
+                        >
+                            Min hjärna är inte "lagom". Den gör nästan alltid alldeles för mycket eller alldeles för
                             lite. Jag fungerar bäst när jag får göra komplexa, uppslukande saker
                             som inte ger utrymme för splittrad uppmärksamhet. Som att spela, koda, sjunga eller arra
                             musik.
@@ -227,7 +433,7 @@
                                 affektiva åkommor</a> som ung vuxen
                             <br> • <a
                                     href="https://www.durham.ac.uk/research/current/thought-leadership/women-with-autism--adhd-arent-diagnosed-until-adulthood/"
-                                    target="_blank"> fick jag inte min rätta diagnos </a> förrän många, många år senare.
+                                    target="_blank"> fick jag inte min rätta diagnos</a> förrän efter många år av ständigt krig med tillvaron.
 
                             <br><br>Men till slut fick jag den, och nu vet jag följande: Det är dyrt för mig att fungera
                             "normalt". Därför har jag inte 100 % arbetskapacitet
@@ -236,16 +442,19 @@
                             100 %. Men jag söker inte ett arbetsliv på 100 %. Jag söker ett arbetsliv att hålla i.
                         </p>
                     </div>
-                    <div class="subheading mb-4">Nu ska jag berätta varför det som har varit jobbigt för mig kan bli en
+                    <div class="subheading mb-4" data-sv="Nu ska jag berätta varför det som har varit jobbigt för mig kan bli en
+                        fördel för dig" data-en="Here's why this might be great news to you:">Nu ska jag berätta varför det som har varit jobbigt för mig kan bli en
                         fördel för dig
                     </div>
 
                     <ul class="list-unstyled">
                         <li class="interactive-list-item">
-                            <div class="strength-header subheading" data-target="strength1">
+                            <div class="strength-header subheading" data-target="strength1" data-sv="• Jag känner mig själv." data-en="• I know myself. I mean really.">
                                 • Jag känner mig själv.
                             </div>
-                            <div class="strength-content" id="strength1">
+                            <div class="strength-content" id="strength1" data-sv="Jag har tvingats lägga många år på att ta reda på vem jag är, hur jag fungerar och vad
+                                jag
+                                behöver för att må bra. Jag vet var jag har mig, och det kommer du också att veta." data-en="Coming soon ...">
                                 Jag har tvingats lägga många år på att ta reda på vem jag är, hur jag fungerar och vad
                                 jag
                                 behöver för att må bra. Jag vet var jag har mig, och det kommer du också att veta.
@@ -253,10 +462,14 @@
                         </li>
 
                         <li class="interactive-list-item">
-                            <div class="strength-header subheading" data-target="strength2">
+                            <div class="strength-header subheading" data-target="strength2" data-sv="• Jag är smart." data-en="• I'm smart.">
                                 • Jag är smart.
                             </div>
-                            <div class="strength-content" id="strength2">
+                            <div class="strength-content" id="strength2" data-sv="Lika värdelös som jag är på att &quot;ha många bollar i luften&quot; och &quot;vara spindeln i nåt
+                            nät&quot;,
+                            lika bra är jag på att hitta kreativa lösningar på komplexa problem, förstå övergripande
+                            strukturer och se detaljer
+                            andra missar." data-en="Coming soon ...">
                                 Lika värdelös som jag är på att "ha många bollar i luften" och "vara spindeln i nåt
                                 nät",
                                 lika bra är jag på att hitta kreativa lösningar på komplexa problem, förstå övergripande
@@ -266,10 +479,13 @@
                         </li>
 
                         <li class="interactive-list-item">
-                            <div class="strength-header subheading" data-target="strength3">
+                            <div class="strength-header subheading" data-target="strength3" data-sv="• Jag jobbar inte med floskler och tomma löften." data-en="• I don't do platitudes and empty promises.">
                                 • Jag jobbar inte med floskler och tomma löften.
                             </div>
-                            <div class="strength-content" id="strength3">
+                            <div class="strength-content" id="strength3" data-sv="Säger jag att jag är bra på något, så är det för att jag är det. På samma sätt är jag
+                                öppen
+                                med vad jag inte kan, vad jag behöver gå igenom igen, eller vad jag känner mig osäker
+                                på." data-en="Coming soon ...">
                                 Säger jag att jag är bra på något, så är det för att jag är det. På samma sätt är jag
                                 öppen
                                 med vad jag inte kan, vad jag behöver gå igenom igen, eller vad jag känner mig osäker
@@ -278,19 +494,22 @@
                         </li>
 
                         <li class="interactive-list-item">
-                            <div class="strength-header subheading" data-target="strength4">
+                            <div class="strength-header subheading" data-target="strength4" data-sv="• Jag ställer höga krav på det jag gör." data-en="• I set high standards for my work.">
                                 • Jag ställer höga krav på det jag gör.
                             </div>
-                            <div class="strength-content" id="strength4">
+                            <div class="strength-content" id="strength4" data-sv="Jag gillar när saker jag jobbar med blir bra. Därför brukar jag se till att de blir det." data-en="Coming soon ...">
                                 Jag gillar när saker jag jobbar med blir bra. Därför brukar jag se till att de blir det.
                             </div>
                         </li>
 
                         <li class="interactive-list-item">
-                            <div class="strength-header subheading" data-target="strength5">
+                            <div class="strength-header subheading" data-target="strength5" data-sv="• Jag är pragmatisk." data-en="• I am pragmatic.">
                                 • Jag är pragmatisk.
                             </div>
-                            <div class="strength-content" id="strength5">
+                            <div class="strength-content" id="strength5" data-sv="Jag vet att bra lösningar är anpassade efter hur verkligheten är, inte hur jag vill att
+                                den
+                                ska vara. Men jag vet också att det vi upplever som sant, verkligt eller normalt, rätt
+                                ofta bara är invanda idéer och rutiner som det är dags att lämna bakom sig." data-en="Coming soon ...">
                                 Jag vet att bra lösningar är anpassade efter hur verkligheten är, inte hur jag vill att
                                 den
                                 ska vara. Men jag vet också att det vi upplever som sant, verkligt eller normalt, rätt
@@ -299,10 +518,14 @@
                         </li>
 
                         <li class="interactive-list-item">
-                            <div class="strength-header subheading" data-target="strength7">
+                            <div class="strength-header subheading" data-target="strength7" data-sv="• Jag är fokuserad." data-en="• I am focused.">
                                 • Jag är fokuserad.
                             </div>
-                            <div class="strength-content" id="strength7">
+                            <div class="strength-content" id="strength7" data-sv="Jag gillar att fokusera på att jobba när jag jobbar, och på att vara ledig när jag är
+                                ledig.
+                                Jag vet att om jag låter min hjärna vila när den behöver, kommer den att vara fokuserad,
+                                effektiv och noggrann när jag behöver den
+                                till jobbet." data-en="Coming soon ...">
                                 Jag gillar att fokusera på att jobba när jag jobbar, och på att vara ledig när jag är
                                 ledig.
                                 Jag vet att om jag låter min hjärna vila när den behöver, kommer den att vara fokuserad,
@@ -312,10 +535,12 @@
                         </li>
 
                         <li class="interactive-list-item">
-                            <div class="strength-header subheading" data-target="strength8">
+                            <div class="strength-header subheading" data-target="strength8" data-sv="• Allt jag vill är att hitta rätt plats och stanna där." data-en="• All I want is to find the right place and stay there.">
                                 • Allt jag vill är att hitta rätt plats och stanna där.
                             </div>
-                            <div class="strength-content" id="strength8">
+                            <div class="strength-content" id="strength8" data-sv="Jag bryr mig inte om höga löner och fina titlar. Jag bryr mig om att trivas där jag är,
+                                att
+                                göra något som känns meningsfullt och att känna att jag gör det bra." data-en="Coming soon ...">
                                 Jag bryr mig inte om höga löner och fina titlar. Jag bryr mig om att trivas där jag är,
                                 att
                                 göra något som känns meningsfullt och att känna att jag gör det bra.
@@ -323,11 +548,18 @@
                         </li>
 
                         <li class="interactive-list-item">
-                            <div class="strength-header subheading" data-target="strength9">
+                            <div class="strength-header subheading" data-target="strength9" data-sv="• Jag presterar bra även under förutsättningar som är dåliga för mig. Bara jag slipper
+                                göra det jämt." data-en="• I perform well even under conditions that are bad for me. As long as I don't have to do it all the time.">
                                 • Jag presterar bra även under förutsättningar som är dåliga för mig. Bara jag slipper
                                 göra det jämt.
                             </div>
-                            <div class="strength-content" id="strength9">
+                            <div class="strength-content" id="strength9" data-sv="Att jobba med tonåringar är att konstant bli avbruten i sina tankebanor. Att ideligen
+                                skifta
+                                från att vara administratör, kommunikatör, inspiratör; samtalsstöd, bollblank, vän;
+                                hjälplärare, ordningsvakt, guide. Det är att
+                                försöka höra sina egna tankar över 20 rastlösa trettonåringar i en stenkorridor. Inget
+                                av det här passar mig över huvud taget. Men jag
+                                gjorde det ändå och jag gjorde det bra." data-en="Coming soon ...">
                                 Att jobba med tonåringar är att konstant bli avbruten i sina tankebanor. Att ideligen
                                 skifta
                                 från att vara administratör, kommunikatör, inspiratör; samtalsstöd, bollblank, vän;
@@ -349,13 +581,26 @@
     <!-- Projects -->
     <section class="resume-section" id="projects">
         <div class="resume-section-content">
-            <h2 class="mb-5">Projekt</h2>
+            <h2 class="mb-5" data-sv="Projekt" data-en="Projects">Projekt</h2>
             <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                 <div class="flex-grow-1">
                     <h3 class="mb-0">Look Who's Talking</h3>
-                    <div class="subheading mb-3">Vilka får höras på era möten?</div>
+                    <div class="subheading mb-3" data-sv="Vilka får höras på era möten?"
+                         data-en="Whose voices are heard at your meetings?">Vilka får höras på era möten?</div>
                     <div class="mt-3">
-                        <p>Look Who's Talking är ett verktyg menat att synliggöra hur talartid fördelas i könsblandade
+                        <p data-sv="Look Who's Talking är ett verktyg menat att synliggöra hur talartid fördelas i könsblandade
+                            mötesgrupper. Studier visar att den egna upplevelsen av hur rättvist talartiden fördelats,
+                            oftast stämmer dåligt med verkligheten, särskilt hos den privilegierade gruppen. Men ett
+                            synliggörande av oönskade mönster kan leda till förbättrad möteskultur.
+
+                            <br><br>Appen är ett tidtagar-verktyg som kan användas under möten. Resultatet av
+                            sammanställs i diagram som kan sparas ner i pdf-format.
+                            Den nuvarande webbappen är en prototyp; slutmålet är en PWA-app med utökad funktionalitet
+                            för till exempel inloggning, datalagring och statistik-vy för strukturella förändringar över
+                            tid.
+
+                            <br><br>Appen är framtagen i samarbete med GenderBalance.se. </p>"
+                           data-en="Coming soon ...">Look Who's Talking är ett verktyg menat att synliggöra hur talartid fördelas i könsblandade
                             mötesgrupper. Studier visar att den egna upplevelsen av hur rättvist talartiden fördelats,
                             oftast stämmer dåligt med verkligheten, särskilt hos den privilegierade gruppen. Men ett
                             synliggörande av oönskade mönster kan leda till förbättrad möteskultur.
@@ -368,7 +613,7 @@
 
                             <br><br>Appen är framtagen i samarbete med GenderBalance.se. </p>
                         <a href="https://ylvakodar.github.io/LookWhosTalking/" class="btn btn-primary me-2"
-                           target="_blank">Prova Look Who's Talking</a>
+                           target="_blank" data-sv="Prova Look Who's Talking" data-en="Try Look Who's Talking">Prova Look Who's Talking</a>
                         <a href="https://github.com/YlvaKodar/LookWhosTalking" class="btn btn-outline-primary"
                            target="_blank">GitHub-repo</a>
                     </div>
@@ -377,9 +622,23 @@
             </div>
             <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                 <div class="flex-grow-1">
-                    <h3 class="mb-0">Pixel Kitten</h3>
+                    <h3 class="mb-0" >Pixel Kitten</h3>
                     <div class="subheading mb-3">2D Java puzzle game</div>
-                    <p>Pixel Kitten är hobbyprojektet jag plockat upp av och till sedan jag började lära mig Java. Jag
+                    <p data-sv="Pixel Kitten är hobbyprojektet jag plockat upp av och till sedan jag började lära mig Java. Jag
+                        var på jakt efter ett
+                        lustfyllt sidoprojekt som kunde tjäna både som avslappning och repetition, när jag snubblade
+                        över RyiSnows youtube-tutorial
+                        <a href=&quot;https://www.youtube.com/playlist?list=PL_QPQmz5C6WUF-pOQDsbsKbaBZqXj4qSq&quot;
+                    target=&quot;_blank&quot;>How to Make a 2D Game in Java</a>
+                    . Till skillnad från Ryi
+                    siktar
+                    jag inte på ett RPG adventure game. Istället hoppas jag förr eller senare kunna presentera
+                    pusselspelet Pixel Kitten, där en ensam pixelhjälte
+                    tvingas riskera alla sina nio liv bland mördarråttor och ändlösa labyrinter. Du hittar en teaser
+                    nedan. Men Pixel Kitten är ett slumrande projekt, så håll inte andan ..."
+
+                        data-en="Coming soon ...">
+                        Pixel Kitten är hobbyprojektet jag plockat upp av och till sedan jag började lära mig Java. Jag
                         var på jakt efter ett
                         lustfyllt sidoprojekt som kunde tjäna både som avslappning och repetition, när jag snubblade
                         över RyiSnows youtube-tutorial
@@ -395,7 +654,8 @@
                     <!-- Video inbäddning -->
                     <div class="mb-3">
                         <div class="ratio ratio-16x9">
-                            <video controls poster="assets/img/kitten-thumbnail.jpg" style="width: 100%; height: 100%; object-fit: cover;">
+                            <video controls poster="assets/img/kitten-thumbnail.jpg"
+                                   style="width: 100%; height: 100%; object-fit: cover;">
                                 <source src="assets/videos/hero-kitten-demo.mp4" type="video/mp4">
                                 <source src="assets/videos/hero-kitten-demo.webm" type="video/webm">
                                 Din webbläsare stöder inte video-taggen.
@@ -412,13 +672,13 @@
     <!-- More-->
     <section class="resume-section" id="more">
         <div class="resume-section-content">
-            <h2 class="mb-5">Annat jag gör</h2>
+            <h2 class="mb-5" data-sv="Annat jag gör" data-en="Other things I like to do">Annat jag gör</h2>
             <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                 <div class="flex-grow-1">
-                    <h3 class="mb-0">Ylva sjunger</h3>
-                    <div class="subheading mb-3">Folksång och körnoter</div>
+                    <h3 class="mb-0" data-sv="Ylva sjunger" data-en="Music">Ylva sjunger</h3>
+                    <div class="subheading mb-3" data-sv="Folksång och körnoter" data-en="Folk songs and musical scores">Folksång och körnoter</div>
                     <div class="mt-3">
-                        <p>Ett av mitt livs stora kärlekar är den vokala folkmusiken. Skälen är för många och för stora,
+                        <p data-sv="" data-en="Coming soon ...">Ett av mitt livs stora kärlekar är den vokala folkmusiken. Skälen är för många och för stora,
                             så jag nöjer mig med att säga att det
                             finns få saker så gripande som en överkrusad folklig koral, eller så suggestiva som en
                             riktigt köttig medeltida ballad. Jag är periodvis
@@ -438,16 +698,17 @@
                             fyrstämmig damkör. Några av dem finns till försäljning, styckvis eller i Ambras nothäfte.
                         </p>
                         <a href="https://sundmusik.com/product/ambra-fyrstammiga-favoriter-nothafte/"
-                           class="btn btn-primary me-2" target="_blank">Ambras nothäfte</a>
+                           class="btn btn-primary me-2" target="_blank" data-sv="Ambras nothäfte" data-en="Ambra's sheet music">Ambras nothäfte</a>
                         <!--   <a href="https://github.com/YlvaKodar/LookWhosTalking" class="btn btn-outline-primary" target="_blank">GitHub-repo</a>-->
                     </div>
                 </div>
             </div>
             <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                 <div class="flex-grow-1">
-                    <h3 class="mb-0">Ylva skapar</h3>
-                    <div class="subheading mb-3">Hantverk och skapande</div>
-                    <p>Jag gillar textilt hantverk. Jag syr, stickar och nålbinder. Men det får vi prata mer om en annan
+                    <h3 class="mb-0" data-sv="Ylva skapar" data-en="Craft and creativity">Ylva skapar</h3>
+                    <div class="subheading mb-3" data-sv="Hantverk och skapande" data-en="Yarn and fabrics">Hantverk och skapande</div>
+                    <p data-sv="Jag gillar textilt hantverk. Jag syr, stickar och nålbinder. Men det får vi prata mer om en annan
+                        gång." data-en="Coming soon ...">Jag gillar textilt hantverk. Jag syr, stickar och nålbinder. Men det får vi prata mer om en annan
                         gång.
                     </p>
                     <!-- Video inbäddning -->
@@ -456,9 +717,8 @@
             </div>
             <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                 <div class="flex-grow-1">
-                    <h3 class="mb-0">Ylva leker</h3>
-                    <div class="subheading mb-3">Jag tar trams på stort allvar</div>
-                    <p>Komplexa spel och överambitiösa lekar. Dumma temafester, onödigt komplicerade pepparkaksbyggen,
+                     <div class="subheading mb-3" data-sv="Jag tar trams på stort allvar" data-en="Taking nonsense seriously">Jag tar trams på stort allvar</div>
+                    <p data-sv="" data-en="Coming soon ...">Komplexa spel och överambitiösa lekar. Dumma temafester, onödigt komplicerade pepparkaksbyggen,
                         stop motion-filmer som ingen orkar se till slut
                         och ständigt tramsande för tramsandets skull. Man orkar inte alltid. Men när man orkar, då ska
                         man. Jag har mycket att vara tacksam för,
@@ -475,7 +735,8 @@
                                             loading="lazy"
                                             allowfullscreen></iframe>
                                 </div>
-                                <p class="text-muted small">Vår första pepparkaks-stop motion. Varning för starka
+                                <p class="text-muted small" data-sv="Vår första pepparkaks-stop motion. Varning för starka
+                                    scener." data-en="Coming soon ...">Vår första pepparkaks-stop motion. Varning för starka
                                     scener.</p>
                             </div>
                         </div>
@@ -489,7 +750,8 @@
                                             loading="lazy"
                                             allowfullscreen></iframe>
                                 </div>
-                                <p class="text-muted small">En alldeles för lång, skillingtrycks-inspirerad
+                                <p class="text-muted small" data-sv="En alldeles för lång, skillingtrycks-inspirerad
+                                    pandemi-visa." data-en="Coming soon ...">En alldeles för lång, skillingtrycks-inspirerad
                                     pandemi-visa.</p>
 
                             </div>
@@ -500,20 +762,20 @@
                     <div class="row">
                         <div class="col-md-6 mb-4">
                             <div class="image-container">
-                                <h5 class="mb-2">Carmina Gutlandia</h5>
+                                <h5 class="mb-2" >Carmina Gutlandia</h5>
                                 <div class="ratio ratio-16x9 mb-2">
                                     <img src="assets/img/carmina.jpg"
                                          alt="Carmina Burana"
                                          class="img-fluid rounded"
                                          style="width: 100%; height: 100%; object-fit: cover;">
                                 </div>
-                                <p class="text-muted small">Cards against humanity's schmedeltida plastsyrra.</p>
+                                <p class="text-muted small" data-sv="Cards against humanity's schmedeltida plastsyrra." data-en="Coming soon ...">Cards against humanity's schmedeltida plastsyrra.</p>
                             </div>
                         </div>
                         <!-- Video: Moon -->
                         <div class="col-md-6 mb-4">
                             <div class="video-container">
-                                <h5 class="mb-2">Moon</h5>
+                                <h5 class="mb-2">Paper Moon</h5>
                                 <div class="ratio ratio-16x9 mb-2">
                                     <video controls style="width: 100%; height: 100%; object-fit: cover;">
                                         <source src="assets/videos/moon.mp4" type="video/mp4">
@@ -521,7 +783,7 @@
                                         Din webbläsare stöder inte video-taggen.
                                     </video>
                                 </div>
-                                <p class="text-muted small">En tjurig pappersmåne.</p>
+                                <p class="text-muted small" data-sv="En tjurig pappersmåne." data-en="Coming soon ...">En tjurig pappersmåne.</p>
                             </div>
                         </div>
                     </div>
@@ -539,8 +801,8 @@
             <!-- PDF Viewer -->
             <div class="mb-4">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h3 class="mb-0">Mitt CV</h3>
-                    <a href="assets/documents/cv.pdf" download="Ylva_CV.pdf" class="btn btn-primary">
+                    <h3 class="mb-0" data-sv="Mitt CV" data-en="My CV (only in Swedish)">Mitt CV</h3>
+                    <a href="assets/documents/cv.pdf" download="Ylva_CV.pdf" class="btn btn-primary" data-sv="<i class=&quot;fas fa-download me-2&quot;></i>Ladda ner mitt CV" data-en="<i class=&quot;fas fa-download me-2&quot;></i>Download my CV">
                         <i class="fas fa-download me-2"></i>Ladda ner mitt CV
                     </a>
                 </div>
@@ -563,7 +825,16 @@
             </div>
 
             <div class="mt-3">
-                <p class="text-muted">
+                <p class="text-muted"
+                   data-sv="<small>
+                        <i class=&quot;fas fa-exclamation-triangle me-1&quot;></i>
+                Kan du inte se CV:t? <a href=&quot;assets/documents/cv.pdf&quot; target=&quot;_blank&quot;>Öppna det i en ny flik
+                här</a>
+                </small>"
+                   data-en="<small>
+                        <i class=&quot;fas fa-exclamation-triangle me-1&quot;></i>
+                Can't see my CV? <a href=&quot;assets/documents/cv.pdf&quot; target=&quot;_blank&quot;>Click here to open it in a new tag</a>
+                </small>">
                     <small>
                         <i class="fas fa-exclamation-triangle me-1"></i>
                         Kan du inte se CV:t? <a href="assets/documents/cv.pdf" target="_blank">Öppna det i en ny flik
@@ -582,7 +853,7 @@
        class="floating-app-btn"
        title="Prova min webbapp Look Who's Talking">
         <i class="fas fa-play me-2"></i>
-        <span class="floating-btn-text">Prova min app</span>
+        <span class="floating-btn-text" data-sv="Prova min app" data-en="Try my web app">Prova min app</span>
     </a>
 </body>
 </html>
