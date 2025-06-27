@@ -28,6 +28,7 @@ function updateLanguage() {
         }
     });
 
+
     updateButtonTexts();
 }
 
